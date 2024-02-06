@@ -1,0 +1,34 @@
+4. Merging and Resolving Conflicts: Merge branches and resolve any merge conflicts that
+arise.
+fastforward merge commit is the one when the branch doesn't have any commit done after the creation of the branch that we are going to merge. so, head is just updated and two branches are merged. no new merge commit is generated.
+
+there is second type of merging: merge commit, if the parent branch has generated some commits after creating the child branch, then at the time of merge, new merge commit is created.
+
+--> when the merge conflict occurs?
+depending upon the specific changes we are going to make, git won't sometimes merge the code automatically, this results in merge conflict, which we need to manually solve.
+suppose in one branch i update a file, and in other i delete that file, so at the merge stage there is a merge conflict.
+
+
+5. Tagging and Releases: Tag specific commits and create a release.
+Tagging
+Like most VCSs, Git has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
+refer this: https://git-scm.com/book/en/v2/Git-Basics-Tagging
+
+Listing Your Tags
+Listing the existing tags in Git is straightforward. Just type git tag (with optional -l or --list):
+
+$ git tag
+v1.0
+v2.0
+This command lists the tags in alphabetical order; the order in which they are displayed has no real importance.
+
+You can also search for tags that match a particular pattern. The Git source repo, for instance, contains more than 500 tags. If you’re interested only in looking at the 1.8.5 series, you can run this:
+
+$ git tag -l "v1.8.5*"
+v1.8.5
+v1.8.5-rc0
+v1.8.5-rc1
+v1.8.5-rc2
+v1.8.5-rc3
+v1.8.5.1
+
